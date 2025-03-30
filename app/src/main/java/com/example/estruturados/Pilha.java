@@ -1,18 +1,24 @@
 package com.example.estruturados;
 
 public class Pilha {
+    private final int capacidade;
     private int topo;
-    private int dados[];
+    private int[] dados;
+    
+    public Pilha(int capacidade){
+        this.capacidade = capacidade;
+        dados = new int[capacidade];
+    }
     
     public boolean vazia(){
-        return topo <= -1;
+        return topo == -1;
     }
     
     public boolean cheia(){
-        return topo == dados.length -1;
+        return topo == capacidade -1;
     }
     
-    public boolean empilhar(int valor){
+    public boolean insere(int valor){
         if(cheia()){
             System.out.println("Tamanho da fila insuficiente!");
             return false; //<---- lidar com caso de tamanho insuficiente externamente
@@ -24,14 +30,20 @@ public class Pilha {
         }
     }
     
-    public int desempilhar(){
+    public int remove(){
         if(vazia()){
             System.out.println("A pilha está vazia!");
             return 0;
         }
         else{
             topo -= 1;
-            return dados[topo];
+            return dados[topo + 1];
+        }
+    }
+    
+    public void imprime(){
+        for(int i = 0; i < topo; i++){
+            System.out.println(dados[i]);
         }
     }
 }

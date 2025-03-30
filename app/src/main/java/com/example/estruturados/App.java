@@ -4,11 +4,22 @@
 package com.example.estruturados;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Pilha pilha = new Pilha(10);
+        pilha.insere(10);
+        pilha.insere(30);
+        pilha.insere(50);
+        pilha.insere(100);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+        pilha.insere(50);
+       
+        
+        pilha.imprime();
     }
 }
