@@ -5,21 +5,16 @@ package com.example.estruturados;
 
 public class App {
     public static void main(String[] args) {
-        Pilha pilha = new Pilha(10);
-        pilha.insere(10);
-        pilha.insere(30);
-        pilha.insere(50);
-        pilha.insere(100);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-        pilha.insere(50);
-       
+        Fila fila = new Fila(10);
+        fila.insere(10);
+        fila.insere(20);
+        fila.insere(30);
+        fila.remove();
+        fila.remove();
+        fila.remove();
+        fila.remove();
         
-        pilha.imprime();
+        
+        fila.imprime();
     }
 }
