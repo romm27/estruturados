@@ -22,7 +22,7 @@ public class Fila {
 
     public void insere(int valor) {
         if (cheia()){
-            System.out.println("Fila cheia!");
+            System.out.println("Pilha cheia!");
             return;
         }
         
@@ -37,7 +37,7 @@ public class Fila {
 
     public int remove() {
         if (vazia()){
-            System.out.println("Fila vazia!");
+            System.out.println("Pilha vazia!");
             return -1;
         }
         int removido = dados[primeiro];
@@ -54,7 +54,7 @@ public class Fila {
 
     public void imprime() {
         if(vazia()){
-            System.out.println("Fila vazia!");
+            System.out.println("Pilha vazia!");
             return;
         }
         
